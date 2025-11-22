@@ -5,7 +5,7 @@ pip install --timeout=300 mediapipe pandas
 pip install --timeout=300 "opencv-python<4.10"
 pip install --timeout=300 "scikit-learn<1.5" "scipy<1.13"
 pip install --timeout=300 "seaborn==0.12.2"
-
+pip install albumentations
 Preprocess:
 2_src/main_mediapipe_convert
 Train

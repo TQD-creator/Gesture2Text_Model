@@ -93,7 +93,7 @@ while cap.isOpened():
                 else:
                     label = None  
                 
-                bar_height_per_class = frame_h // N_CLASSES
+                bar_height_per_class = frame_h // N_CLASSES #?
                 
                 for i in range(N_CLASSES):
                     class_name = MODEL_CLASSES[i]
@@ -110,7 +110,7 @@ while cap.isOpened():
                         color = (0, 255, 255)
                         text_color = (0, 0, 0)
                     
-                    cv2.rectangle(bar_area, (5, y_start + 2), (5 + bar_width, y_end - 2), color, -1)
+                    cv2.rectangle(bar_area, (5, y_start + 2), (5 + bar_width, y_end - 2), color, -1)#?
                     text = f"{class_name}: {prob*100:.0f}%"
                     cv2.putText(bar_area, text, (10, y_end - 5), 
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, text_color, 1)
@@ -155,7 +155,7 @@ while cap.isOpened():
             no_hand_start_time = time.time()
             timer_text = "" 
         else:
-            no_hand_elapsed = time.time() - no_hand_start_time
+            no_hand_elapsed = time.time() - no_hand_start_time #?
             
             progress_w = int((no_hand_elapsed / NO_HAND_DURATION) * (frame_w - 20))
             if progress_w > (frame_w - 20): progress_w = frame_w - 20
